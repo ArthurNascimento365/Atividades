@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+main (){
+	short op;
+	int num1,num2;
+	printf("\nInforme 2 numeros: ");
+	scanf("%d %d",&num1,&num2);
+	if ((num1>0) && (num2>0)){
+		printf("\n1-\tSoma de 2 numeros");
+		printf("\n2-\tDiferenca entre 2 numeros");
+		printf("\n3-\tProduto entre 2 numeros");
+		printf("\n4-\tDivisao entre 2 numeros");
+		printf("\n\nOperacao escolhida:\t");
+		scanf("%d",&op);
+		if (op==1)
+			printf("\n\n%d + %d = %d",num1,num2,num1+num2);
+		else
+			if (op==2) 
+				if ((num1>num2) || (num1==num2))
+					printf("\n\n%d - %d = %d",num1,num2,num1-num2);
+				else
+					printf("\n\n%d - %d = %d",num2,num1,num2-num1);
+			else
+				if (op==3)
+					printf("\n\n%d x %d = %d",num1,num2,num1*num2);
+				else
+					if (op==4)
+						if (num2==0)
+							printf("\n\nDenominador nao pode ser zero");
+						else
+							printf("\n\n%d / %d = %d",num1,num2,num1/num2);
+	}
+	else
+		printf("\nSomente numeros positivos!");		
+}
