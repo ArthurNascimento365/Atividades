@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+main (){
+	short idade,tempserv;
+	printf("\n\n-------------[]Previdencia Social[]--------------");
+	printf("\nIdade: ");
+	scanf("%hd",&idade);
+	printf("Tempo de servico: ");
+	scanf("%hd",&tempserv);
+	if ((idade>=65) || (tempserv>=30) || ((idade>=60) && (tempserv>=25)))
+		printf("\nCumpre os requisitos para aposentar!");
+	else
+		printf("Nao cumpre os requisitos");
+}
