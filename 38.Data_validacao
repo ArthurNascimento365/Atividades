@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+main (){
+	short dia,mes,ano;
+	printf("\nInforme o dia de nascimento: ");
+	scanf("%hd",&dia);
+	printf("\nInforme o mes de nascimento: ");
+	scanf("%hd",&mes);
+	printf("\nInforme o ano de nascimento: ");
+	scanf("%hd",&ano);
+	if ((ano%4==0) && (ano%100>0)){
+		if ((dia<=29) && (mes==2) && (ano<=2016))
+			printf("\nData valida");
+		else
+			if ((dia<=30) && ((mes==4) || (mes==6) || (mes==9) || (mes==11)) && (ano<=2016))
+				printf("\nData valida");
+			else
+				if ((dia<=31) && ((mes==1) || (mes==3) || (mes==5) || (mes==7) || (mes==8) || (mes==10) || (mes==12)) && (ano<=2016))
+					printf("\nData valida");
+				else
+					printf("\nData Invalida");
+					}
+	else{
+		if ((dia<=29) && (mes==2) && (ano<=2016))
+			printf("\nData valida");
+		else
+			if ((dia<=30) && ((mes==4) || (mes==6) || (mes==9) || (mes==11)) && (ano<=2016))
+				printf("\nData valida");
+			else
+				if ((dia<=31) && ((mes==1) || (mes==3) || (mes==5) || (mes==7) || (mes==8) || (mes==10) || (mes==12)) && (ano<=2016))
+					printf("\nData valida");
+				else
+					printf("\nData Invalida");
+		}
