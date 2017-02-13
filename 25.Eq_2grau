@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+main (){
+	int a,b,c;
+	float delta,x1,x2;
+	printf("\n---------Equacao do 2 grau---------\n");
+	printf("\nDigite o valor de A: ");
+	scanf("%d",&a);
+	printf("\nDigite o valor de B: ");
+	scanf("%d",&b);
+	printf("\nDigite o valor de C: ");
+	scanf("%d",&c);
+	delta = (b*b) - 4*a*c;
+	printf("\nValor de delta: %.1f",delta);
+	if (delta<0)
+		printf("\nNao existe raiz");
+	else
+		if (delta==0)
+			printf("\nRaiz unica");
+		else
+			if (delta>=0){
+				x1= (-(b)+ sqrt(delta)) / (2*a);
+				x2= (-(b)- sqrt(delta)) / (2*a);
+				printf("\nX1 = %.1f",x1);
+				printf("\nX2 = %.1f",x2);
+			}	
+}
