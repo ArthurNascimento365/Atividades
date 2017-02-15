@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+main (){
+	float val;
+	short op;
+	puts("Informe o valor do produto: ");
+	scanf("%f",&val);
+	if (val>0){
+		printf("\n1-MG");
+		printf("\n2-SP");
+		printf("\n3-RJ");
+		printf("\n4-MS");
+		printf("\nEstado escolhido: ");
+		scanf(" %hd",&op);
+		switch(op){
+			case 1 : val = val + (val * 0.07); break;
+			case 2 : val = val + (val * 0.12); break;
+			case 3 : val = val + (val * 0.15); break;
+			case 4 : val = val + (val * 0.08); break;
+			default : printf("\nOperacao invalida!");
+		}
+		if ((op>0) && (op<=3))
+			printf("\nValor c\ imposto: %f",val);
+		}
+	else
+		printf("\nO valor deve ser positivo!");
